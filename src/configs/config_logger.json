@@ -1,0 +1,18 @@
+{
+    "LOG_TIMESTAMPS": true,
+
+    "STARTUP_MESSAGES": [
+        "Initalizing...",
+        "Starting up...",
+        "Revving engines...",
+        "Brewing a cup of coffee...",
+        "Giving the developer a pat on the back..."
+    ],
+
+    "COLORS": {
+        "DEBUG": "#C45AB3",
+        "EVENT_NAME": "#9381FF",
+        "COMMAND_NAME": "#EFCD1E",
+        "MONGO": "#FF9214"
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "ts-node": {
+        "files": true,
+        "require": ["tsconfig-paths/register"]
+    },
+
+    "compilerOptions": {
+        /* Language and Environment */
+        "target": "ESNext",
+
+        /* Modules */
+        "resolveJsonModule": true,
+        "module": "commonjs",
+        "rootDir": "./src",
+        "baseUrl": "./",
+        "paths": {
+            "@customTypes/*": ["./src/types/*"],
+
+            "@configs": ["./src/configs"],
+            "@events/*": ["./src/events/*"],
+            "@models": ["./src/models"],
+
+            "@slashCommands/*": ["./src/commands/slash/*"],
+            "@prefixCommands/*": ["./src/commands/prefix/*"],
+            "@commands/*": ["./src/commands/*"],
+
+            "@utils/*": ["./src/utils/*"],
+
+            "@constants": ["./src/constants.ts"],
+            "@pkgJSON": ["./package.json"]
+        },
+
+        /* Emit */
+        "outDir": "./dist",
+        "removeComments": true,
+        "noEmitOnError": true,
+
+        /* Interop Constraints */
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+
+        /* Type Checking */
+        "strict": true,
+
+        /* Completeness */
+        "skipLibCheck": true
+    }
+}
