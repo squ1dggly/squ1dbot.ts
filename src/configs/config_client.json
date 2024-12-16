@@ -13,7 +13,7 @@
     "PREFIX": "!",
 
     "staff": {
-        "OWNER_ID": "",
+        "OWNER_ID": "842555247145779211",
         "SUPERUSERS": [],
         "BYPASSERS": [{ "COMMAND_NAME": "", "USER_IDS": [] }],
         "IGNORES_GUILD_ADMIN": {
