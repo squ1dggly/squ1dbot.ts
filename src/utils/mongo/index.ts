@@ -9,7 +9,8 @@ export * as models from "@models";
 
 /* - - - - - { Managers } - - - - - */
 import guildManager from "./guildManager";
-export { guildManager };
+import userManager from "./userManager";
+export { guildManager, userManager };
 
 /* - - - - - { Meta Functions } - - - - - */
 let connectionAttempts = 0;
