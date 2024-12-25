@@ -1,6 +1,5 @@
 import { fork, ChildProcess } from "node:child_process";
 import { existsSync, createWriteStream } from "fs";
-import { WriteStream } from "node:fs";
 import { join } from "node:path";
 
 const __argsv: string[] = process.argv.slice(2);
