@@ -62,15 +62,30 @@ async function cmd_remove(client: Client, acm: AppCommandManager, type: string, 
 }
 
 function cmd_help() {
-    console.log(
-        "| - - - - - { COMMAND LINE INTERFACE } - - - - - |\n| Prefix: '/'\n| Available commands: '/push' | '/remove' | '/help'\n| ____________ Created by @xsqu1znt ____________ |"
-    );
+    const help = [
+        "| - - - - - - - - - - - { COMMAND LINE INTERFACE } - - - - - - - - - - - |",
+        "|                                                                        |",
+        "|                                                                        |",
+        "|                           CommandPrefix: '/'                           |",
+        "|        Available: '/push' | '/remove' | '/help' | '/testlogger'        |",
+        "|                                                                        |",
+        "|                                                                        |",
+        "| ________________________ Created by @xsqu1znt ________________________ |"
+    ];
+
+    for (const line of help) {
+        logger.log(line, { timestamp: false, bold: true });
+    }
+}
+
+function cmd_testLogger() {
+    logger.test();
 }
 
 export default async function (client: Client, acm: AppCommandManager): Promise<void> {
     const rl = createInterface({
-        input: process.stdin as unknown as NodeJS.ReadableStream,
-        output: process.stdout as unknown as NodeJS.WritableStream,
+        input: process.stdin as any as NodeJS.ReadableStream,
+        output: process.stdout as any as NodeJS.WritableStream,
         terminal: false
     });
 
@@ -86,17 +101,16 @@ export default async function (client: Client, acm: AppCommandManager): Promise<
         switch (commandName.toLowerCase()) {
             case "/push":
                 return cmd_push(client, acm, args[0], args.slice(1));
-
             case "/remove":
                 return cmd_remove(client, acm, args[0], args.slice(1));
-
             case "/help":
                 return cmd_help();
-
+            case "/testlogger":
+                return cmd_testLogger();
             default:
                 return;
         }
     });
 
-    logger.log("[CLI] Use /help in the terminal to view runtime available commands.");
+    logger.log("::CLI Use /help in the terminal to view the available runtime commands.", { timestamp: false, bold: true });
 }
