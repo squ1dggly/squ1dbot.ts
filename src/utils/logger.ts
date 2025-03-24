@@ -23,11 +23,7 @@ import { Client } from "discord.js";
 import jsTools from "jstools";
 import chalk from "chalk";
 
-<<<<<<< HEAD
-import { VERSION } from "@constants";
-=======
 import { APP_VERSION } from "@constants";
->>>>>>> c16a101 (init)
 
 import config from "@configs";
 const { COLORS } = config.logger;
@@ -105,11 +101,7 @@ export const client = {
     online: (): void => log(`::CLIENT ✅ ${chalk.greenBright("Successfuly connected to Discord!")}`),
     ready: (client?: Client) =>
         log(
-<<<<<<< HEAD
-            `::CLIENT ✅ ${chalk.greenBright(`${chalk.bold.underline(client?.__name || "Discord Bot")} v${VERSION} is up and running!`)} 🎉`
-=======
             `::CLIENT ✅ ${chalk.greenBright(`${chalk.bold.underline(client?.__name || "Discord Bot")} v${APP_VERSION} is up and running!`)} 🎉`
->>>>>>> c16a101 (init)
         )
 };
 

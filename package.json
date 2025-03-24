@@ -1,6 +1,6 @@
 {
-    "name": "template_djs_v14_ts",
-    "version": "1.0.0",
+    "name": "squ1dbot",
+    "version": "0.1a",
     "description": "",
     "main": "dist/index.js",
     "scripts": {
