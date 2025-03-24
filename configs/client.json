@@ -1,0 +1,59 @@
+{
+    "VERSION": "1.0.0",
+
+    "AUTO_DEV_MODE": true,
+    "DEV_MODE_OVERRIDE": null,
+
+    "TOKEN": "",
+    "TOKEN_DEV": "",
+
+    "MONGO_URI": "",
+    "MONGO_URI_DEV": "",
+
+    "MAX_DB_CONNECTION_ATTEMPTS": 5,
+
+    "PREFIX": "!",
+
+    "staff": {
+        "OWNER_ID": "",
+        "SUPERUSERS": [],
+        "BYPASSERS": [{ "COMMAND_NAME": "", "USER_IDS": [] }],
+        "IGNORES_GUILD_ADMIN": {
+            "AllBotStaff": false,
+            "BotOwner": false,
+            "SuperUsers": false,
+            "Bypassers": false
+        }
+    },
+
+    "support_server": {
+        "GUILD_ID": "",
+        "INVITE_URL": "https://discord.gg/your_server",
+        "INVITE_ON_COMMAND_ERROR": false,
+        "channels": {
+            "WELCOME": "0123456789"
+        }
+    },
+
+    "client_activity": {
+        "default": {
+            "INTERVAL": "1m",
+            "RANDOM_ACTIVITY": false,
+
+            "ACTIVITY": [
+                { "STATUS": "online", "TYPE": "custom", "NAME": "Need any help? Use /help or !help" },
+                { "STATUS": "online", "TYPE": "custom", "NAME": "Join our community! discord.gg/your_server" },
+                { "STATUS": "online", "TYPE": "watching", "NAME": "✨ $GUILD_COUNT servers" }
+            ]
+        },
+
+        "dev": {
+            "ACTIVITY": {
+                "STATUS": "dnd",
+                "TYPE": "custom",
+                "NAME": "🧨 playing with unstable substances...",
+                "STREAM_URL": ""
+            }
+        }
+    }
+}

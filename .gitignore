@@ -1,0 +1,9 @@
+.vscode/settings.json
+
+package-lock.json
+node_modules
+dist
+.env
+
+# Other files
+TODO.txt

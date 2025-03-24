@@ -1,0 +1,19 @@
+{
+    "DJS Event": {
+        "scope": "typescript",
+        "prefix": "event-base",
+        "description": "A base template for any DJS client event.",
+        "body": [
+            "import { DJSClientEvent } from \"@customTypes/events\";\n",
+
+            "export const __event: DJSClientEvent<\"${1:}\"> = {",
+            "    name: __filename.split(\"/\").pop()!.split(\".\")[0],",
+            "    event: \"${1:}\",\n",
+
+            "    execute: async (client${2:}) => {",
+            "        /* TODO: code to run once the event is triggered... */$0",
+            "    }",
+            "};\n"
+        ]
+    }
+}
