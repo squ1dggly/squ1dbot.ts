@@ -1,1 +1,2 @@
-export * from "./guildManager";
+export * from './guildManager';
+export * from './userManager';
